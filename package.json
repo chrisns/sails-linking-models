@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "Linking models",
   "keywords": [
-    "reversible",
+    "hateoas",
+    "links",
     "sails"
   ],
   "author": [
@@ -24,13 +25,12 @@
     "url": "http://github.com/chrisns/sails-linking-models/issues"
   },
   "license": "GPL-2.0",
-  "sails": {
-    "isHook": true
-  },
   "main": "./lib",
   "dependencies": {
     "lodash": "^3.10.1",
-    "sails-util": "^0.10.6",
+    "sails-util": "^0.10.6"
+  },
+  "optionalDependencies": {
     "sails-reverse-routing": "^1.0.12"
   },
   "devDependencies": {
