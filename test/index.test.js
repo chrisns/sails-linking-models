@@ -5,7 +5,8 @@ describe('UNIT sails-linking-models', () => {
   describe('modelLinks', () => {
     let reverseRouteService, result;
     before(() => {
-      reverseRouteService = sinon.stub().returns(['link1', 'link2']);
+
+      reverseRouteService = sinon.stub().returns('link1');
     });
 
     describe('without actionsArray passed in...', () => {
@@ -20,12 +21,11 @@ describe('UNIT sails-linking-models', () => {
         });
       });
 
-      it('should return an array of links of length 3', () => {
-        expect(result).to.have.length(3)
-          .and.to.contain.a.thing.with.keys('rel', 'link')
-          .and.to.contain.a.thing.with.property('rel', 'findOne')
-          .and.to.contain.a.thing.with.property('rel', 'update')
-          .and.to.contain.a.thing.with.property('rel', 'destroy');
+
+      it('should return aa links object with the expected properties', () => {
+        expect(result).to.have.property('self')
+        expect(result).to.have.property('update')
+        expect(result).to.have.property('destroy')
       });
     });
     describe('with actionsArray passed in...', () => {
@@ -33,10 +33,9 @@ describe('UNIT sails-linking-models', () => {
         result = lib.attributes.modelLinks('controllerName', reverseRouteService, ['action1', 'action2']);
       });
       it("should use the actionsArray parameter", () => {
-        expect(result).to.have.length(2)
-          .and.to.contain.a.thing.with.keys('rel', 'link')
-          .and.to.contain.a.thing.with.property('rel', 'action1')
-          .and.to.contain.a.thing.with.property('rel', 'action2');
+        expect(result).to.have.property('action1')
+        expect(result).to.have.property('action2')
+
       });
     });
   });
