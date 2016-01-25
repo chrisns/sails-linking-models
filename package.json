@@ -24,7 +24,7 @@
   "bugs": {
     "url": "http://github.com/chrisns/sails-linking-models/issues"
   },
-  "license": "GPL-2.0",
+  "license": "MIT",
   "main": "./lib",
   "dependencies": {
     "lodash": "^3.10.1",
