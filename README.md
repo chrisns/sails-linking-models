@@ -1,5 +1,7 @@
 # sails-linking-models
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/chrisns/sails-linking-models.svg)](https://greenkeeper.io/)
+
 [![Build](https://travis-ci.org/chrisns/sails-linking-models.png)](https://travis-ci.org/chrisns/sails-linking-models)
 [![Coverage](https://coveralls.io/repos/chrisns/sails-linking-models/badge.png)](https://coveralls.io/r/chrisns/sails-linking-models)
 [![Quality](https://codeclimate.com/github/chrisns/sails-linking-models.png)](https://codeclimate.com/github/chrisns/sails-linking-models)
